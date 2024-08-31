@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/settings-2.svg" type="image/svg">
+    <link rel="stylesheet" href="index.css">
+    <title>Список ВЗН</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="modal" id="modal">
+            <div class="modal__header">
+                <span class="close__btn" id="close__btn"></span>
+                <h2>Фильтр ВЗН УП</h2>
+            </div>
+            <form id="form" class="modal__form">
+                <fieldset class="modal__form__fieldset">
+                    <label for="number">Номер ВЗН</label>
+                    <input type="number" id="number" name="number" placeholder="Введите номер ВЗН" maxlength="20" required>
+                </fieldset>
+                <fieldset class="modal__form__fieldset">
+                    <label for="sender">Отправитель</label>
+                    <input type="text" id="sender" name="sender" placeholder="Введите отправителя" maxlength="50" required>
+                </fieldset>
+                <fieldset class="modal__form__fieldset">
+                    <label for="receiver">Получатель</label>
+                    <input type="text" id="receiver" name="receiver" placeholder="Введите получателя" maxlength="50" required>
+                </fieldset>
+                <fieldset class="modal__form__fieldset">
+                    <legend>Дата принятия (период)</legend>
+                    <input type="date" id="start__date" name="start__date" required>
+                    <span>-</span>
+                    <input type="date" id="end__date" name="end__date" required>
+                </fieldset>
+                <div class="modal__btns">
+                    <button id="submit__btn" type="submit" class="modal__btn submit__btn">Поиск</button>
+                    <button type="button" class="modal__btn cancel__btn" id="cancel__btn">Отмена</button>
+                </div>
+            </form>
+        </div>
+        <header class="header__list">
+            <h1 class="header__title">ВЗН УП (Расход)</h1>
+            <div class="header__btn">
+                <button id="header__btn__search">Поиск</button>
+                <button>Создать</button>
+            </div>
+        </header>
+        <main>
+            <ul class="list__items">
+            </ul>
+        </main>
+    </div>
+</body>
+<script src="footer.js"></script>
+<script src="list.js"></script>
+</html>
